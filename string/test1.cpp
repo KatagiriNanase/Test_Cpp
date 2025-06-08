@@ -210,6 +210,11 @@ int main()
     // Test6();
     //Test7();
     // Test8();
-    Test9();
+    //Test9();
+
+    string s("hello");
+    cout << s << endl;
+    //s.erase(2, 2);
+    cout << s << endl;
     return 0;
 }

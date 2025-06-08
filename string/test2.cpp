@@ -1,11 +1,12 @@
+#include <iostream>
+using namespace std;
 #include "string2.h"
-using namespace nanase;
 
 int main()
 {
     // nanase::test_string1();
-    // nanase::test_string2();
-    nanase::test_string3();
+    // nanase::test_string2();1
+    nanase::test_string8();
 
     return 0;
 }
