@@ -146,13 +146,39 @@ void vector_test4()
 
 }
 
+/* 迭代器失效 */
+void vector_test5()
+{
+    vector<int> v;
+    v.push_back(1);
+    v.push_back(2);
+    v.push_back(30);
+    v.push_back(4);
+    v.push_back(5);
+    v.push_back(6);
+    v.push_back(7);
+
+    vector<int>::iterator it = v.begin();
+
+    while (it != v.end())
+    {
+        if ((*it) % 2 == 0)     //删除it后，此时的it就失效了
+            it = v.erase(it);   //erase会返回删除的it的下一个位置的迭代器
+        else
+            it++;
+    }
+
+    PrintVector(v);
+
+}
+
 int main()
 {
     // vector_test1();
     // vector_test2();
     // vector_test3();
-    vector_test4();
-
+    // vector_test4();
+    vector_test5();
 
     return 0;
 }
